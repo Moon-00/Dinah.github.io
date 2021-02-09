@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(34, 36, 58);
+    color: black;
+    
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .footer {
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .header {
+    background: rgb(42, 42, 68);
+    color: rgb(155, 155, 155);
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .contenido {
+    grid-column: 2;
+    
+}
+
+.contenedor .contenido h1 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+
+
+.contenedor .widget1,
+.contenedor .widget2 {
+    background: rgb(42, 42, 68);
+}
+
+.contenedor .footer{
+    background: rgb(42, 42, 68);
+    color: rgb(155, 155, 155);
+    grid-column: 1/4;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+@media screen and (max-width: 768px) {
+.contenedor .contenido {
+    grid-column: 1/ -1;
+}
+
+.contenedor .sidebar {
+    grid-column: 1/ -1;
+}
+}
+
+
+.contenedor .navegacion {
+    background: rgb(42, 42, 68);
+    color: rgb(155, 155, 155);
+    grid-column-start: 1;
+    grid-column-end: 4;
+    
+}
+
+.contenedor .navegacion ul {
+    list-style-type: none;
+   text-align: center;
+   
+}
+
+.contenedor  .navegacion  li {
+    display: inline;
+    text-align: center;
+    margin: 30px;
+    text-decoration: none;
+    
+}
+
+.contenedor .navegacion li a {
+    color: rgb(155, 155, 155);
+    text-decoration: none;
+
+}
+
